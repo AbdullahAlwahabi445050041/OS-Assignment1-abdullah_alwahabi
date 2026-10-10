@@ -129,21 +129,21 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - September 23, 2026, 2:00 PM
+What I did: Added a priority variable to the Process class
 
-**Details**:
+Added the priority variable to store each process priority.
 
-**Challenges**:
+Updated the process constructor to receive a priority value.
 
-**Solution**:
+Added a getter method to access the priority.
 
-**Time spent**:
+Reviewed the changes in the Process class.
 
 ---
 
 ### Entry 2 - [Date and Time]
-**What I did**:
+What I did: Added random priority generation for processes
 
 **Details**:
 
