@@ -149,7 +149,7 @@ Time spent: 30 minute
 
 ---
 
-### Entry 2 -Entry 3 - September 25, 2026, 4:00 PM
+### Entry 2 - September 25, 2026, 4:00 PM
 What I did: Added random priority generation for processes
 
 Used the Random class to generate priority values.
@@ -167,7 +167,7 @@ Solution: Used 1 + random.nextInt(10) to generate random priorities between 1 an
 Time spent: 25 minutes.
 ---
 
-### Entry 3 - Entry 4 - September 27, 2026, 2:30 PM
+### Entry 3 - September 27, 2026, 2:30 PM
 What I did: Added a context switch counter to the scheduler.
 
 Declared a static variable named contextSwitchCount.
@@ -187,30 +187,35 @@ Solution: Placed the increment before currentThread.start() so each process star
 Time spent: 30 minutes.
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**:
+### Entry 4 - September 29, 2026, 4:00 PM
+What I did: Added configuration time tracking to the Process class
 
-**Details**:
+Added the configurationTime variable.
+Used System.currentTimeMillis() to record the process creation time.
+Initialized totalWaitingTime to zero.
+Set lastReadyTime to the initial configuration time.
 
-**Challenges**:
+Challenges: I needed to initialize the time variables correctly.
 
-**Solution**:
+Solution: Recorded the creation time in the constructor and used it to initialize the last ready time.
 
-**Time spent**:
-
+Time spent: 30 minutes.
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 5 -  October 8, 2026, 5:00 PM
+What I did: Reviewed the three required scheduling features.
 
-**Details**:
+**Details**:Checked the random process priorities from 1 to 10.
+Reviewed the context switch counter.
+Checked the waiting time tracking variables.
+Reviewed the turnaround time calculation.
+Compared the implementation with the assignment requirements.
 
-**Challenges**:
+Challenges: I needed to ensure that all three features followed the assignment specifications.
 
-**Solution**:
+Solution: Reviewed the relevant code sections and checked the expected program behavior.
 
-**Time spent**:
-
+Time spent: 40 minutes.
 ---
 
 ### Entry 6 - [Optional - Date and Time]
