@@ -140,19 +140,31 @@ Added a getter method to access the priority.
 
 Reviewed the changes in the Process class.
 
+
+Challenges: I needed to make sure that each process stored its own priority.
+
+Solution: Added the priority parameter to the constructor and assigned it to the instance variable.
+
+Time spent: 30 minute
+
 ---
 
 ### Entry 2 - [Date and Time]
 What I did: Added random priority generation for processes
 
-**Details**:
+Used the Random class to generate priority values.
 
-**Challenges**:
+Set the priority range from 1 to 10
 
-**Solution**:
+Made 10 the highest priority value.
 
-**Time spent**:
+Passed the generated priority to the process constructor.
 
+Challenges: I needed to generate values within the required range.
+
+Solution: Used 1 + random.nextInt(10) to generate random priorities between 1 and 10.
+
+Time spent: 25 minutes.
 ---
 
 ### Entry 3 - [Date and Time]
