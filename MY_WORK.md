@@ -275,7 +275,7 @@ What I would do differently next time: Start earlier and test each feature separ
 
 > 💡 **TIP:** Describe your method: reading documentation, adding `System.out.println` to debug, re-reading the README, testing after each small change, asking for help.
 
-**Your Answer:** *(5-7 sentences)*
+**I overcame the challenges by reviewing the code carefully. I read the README to understand the assignment requirements. I tested the program after making changes. I used compiler error messages to identify mistakes. I also reviewed the Java concepts I found difficult. This helped me understand the code and fix errors.** *(5-7 sentences)*
 
 [Write your answer here.]
 
