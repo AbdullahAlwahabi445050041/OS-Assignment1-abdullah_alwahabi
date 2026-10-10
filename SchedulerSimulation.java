@@ -31,12 +31,27 @@ class Process implements Runnable {
     private int timeQuantum; // Time slice (time quantum) allowed per CPU access (in milliseconds)
     private int remainingTime; // Time left for the process to finish its execution
 
+    private int priority;  //اضفنا متغير برايوريتي F1
+
+
+    private long configurationTime; // عرفنا متغيير كونفيقريشون تاين F3
+    private long total waitingTime; // عرفنا متغيير توتال وايتينغ تايم F3
+    private long lastReadyTime; // عرفنا متغيير لاست ريدي تايم F3
+
+    
     // Constructor to initialize the process with name, burst time, and time quantum
     public Process(String name, int burstTime, int timeQuantum) {
         this.name = name;
         this.burstTime = burstTime;
         this.timeQuantum = timeQuantum;
         this.remainingTime = burstTime; // Initially, remaining time is equal to the burst time
+
+        this.priority = priority; // اعطيناها قيمه  في الكونستركتر  F1
+
+
+        this.configurationTime = System.currentTimeMillis(); // عشان تعطينا وقت انشاء العملية F3
+        this.totalWaitingTime = 0; // نخلي وقت الانتظار الكلي صفر في البداية F3
+        this.lastReadyTime = this.creationTeme; // نخلي اخر وقت جاهز يساوي وقت الانشاء F3
     }
 
     // This method will be called when the thread for this process is started
@@ -134,6 +149,22 @@ class Process implements Runnable {
         return burstTime;
     }
 
+    public int getpriority(){
+        return priority;    
+    }                            //سوينا للبرايوريتي جيت F1
+
+    public long getConfigurationTime() {
+        return configurationTime;
+    }    // سوينا للكونفيقريشن تايم جيت F3
+
+    public long getTotalWaitingTime() {
+        return totalWaitingTime;
+    }    // سوينا للتوتال وايتينغ تايم جيت F3
+
+    public long getLastReadyTime() {
+        return lastReadyTime;
+    }    // سوينا لللاست ريدي تايم جيت F3
+
     public int getRemainingTime() {
         return remainingTime;
     }
@@ -145,6 +176,9 @@ class Process implements Runnable {
 }
 
 public class SchedulerSimulation {
+   
+   private static int contextSwitchCount = 0; // عرفنا كونيكست سويتش كاونتر  F2
+
     public static void main(String[] args) {
         // ⚠️ IMPORTANT: Put your student ID here to seed the random number generator
         // This makes your output unique to you - DO NOT forget to change this!
@@ -215,12 +249,18 @@ public class SchedulerSimulation {
         System.out.println(Colors.BOLD + Colors.GREEN + 
                           "╚════════════════════════════════════════════════════════════════════════════════╝" + 
                           Colors.RESET + "\n");
+
+
+
+
         
         // Loop to manage the scheduling of processes
         while (!processQueue.isEmpty()) {
             // Get the next thread from the queue (FIFO)
             Thread currentThread = processQueue.poll(); // Dequeues the next thread
             
+
+            contextSwitchCount++; //   نزود كاونتر الكونيكست سويتش  F2 
             // Print the current process queue (list of process IDs in the queue)
             System.out.println(Colors.BOLD + Colors.MAGENTA + "┌─ Ready Queue " + "─".repeat(65) + Colors.RESET);
             System.out.print(Colors.MAGENTA + "│ " + Colors.RESET + Colors.BRIGHT_WHITE + "[" + Colors.RESET);
@@ -230,6 +270,11 @@ public class SchedulerSimulation {
                 if (queueCount > 0) System.out.print(Colors.WHITE + " → " + Colors.RESET);
                 System.out.print(Colors.BRIGHT_CYAN + process.getName() + Colors.RESET);
                 queueCount++;
+
+                int priorite =1 + random.nextInt(5); //  برايوريتي عشوائي بين1-5  F1
+
+                process process = processMap("p" + i, burstTime, timeQuantum, priorite); // F1  اعطيناها قيمه  في الكونستركتر  F1
+            
             }
             if (queueCount == 0) {
                 System.out.print(Colors.YELLOW + "empty" + Colors.RESET);
