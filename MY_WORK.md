@@ -283,7 +283,7 @@ What I would do differently next time: Start earlier and test each feature separ
 
 > 💡 **TIP:** Use real applications you know (web browser, game, mobile app, music player) and connect each one to what you built here.
 
-**Your Answer:** *(5-7 sentences)*
+** A web browser uses threads to load pages and download files simultaneously. Games use threads to handle graphics, sound, and user input. Music players can play music while users browse other features. Mobile apps use threads to perform tasks without freezing the interface. My assignment helped me understand how threads manage multiple tasks efficiently.** *(5-7 sentences)*
 
 [Write your answer here.]
 
