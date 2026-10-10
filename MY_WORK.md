@@ -259,7 +259,7 @@ What I would do differently next time: Start earlier and test each feature separ
 
 > 💡 **TIP:** Talk about thread creation (`Runnable`, `Thread.start()`), waiting with `Thread.join()`, simulating work with `Thread.sleep()`, and what surprised you.
 
-**Your Answer:** *(5-7 sentences)*
+**I learned how Java threads work and how they can run tasks independently. I learned how to use Runnable to define a task and Thread.start() to start a thread. I also learned how Thread.join() makes the main thread wait for another thread to finish. I used Thread.sleep() to simulate process execution time. I was surprised that threads can run concurrently, but join() can control the execution order.** *(5-7 sentences)*
 
 [Write your answer here.]
 
