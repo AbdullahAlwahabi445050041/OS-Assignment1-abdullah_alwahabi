@@ -149,7 +149,7 @@ Time spent: 30 minute
 
 ---
 
-### Entry 2 - [Date and Time]
+### Entry 2 -Entry 3 - September 25, 2026, 4:00 PM
 What I did: Added random priority generation for processes
 
 Used the Random class to generate priority values.
@@ -167,17 +167,24 @@ Solution: Used 1 + random.nextInt(10) to generate random priorities between 1 an
 Time spent: 25 minutes.
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - Entry 4 - September 27, 2026, 2:30 PM
+What I did: Added a context switch counter to the scheduler.
 
-**Details**:
+Declared a static variable named contextSwitchCount.
+Initialized the counter to zero.
+Incremented the counter when a process thread was started.
+Reviewed the position of the counter inside the scheduling loop.:
 
-**Challenges**:
+Initialized the counter to zero.
 
-**Solution**:
+Incremented the counter when a process thread was started.
 
-**Time spent**:
+Reviewed the position of the counter inside the scheduling loop.
+Challenges: I needed to identify where to increment the counter.
 
+Solution: Placed the increment before currentThread.start() so each process start was counted.
+
+Time spent: 30 minutes.
 ---
 
 ### Entry 4 - [Date and Time]
