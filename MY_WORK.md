@@ -235,13 +235,13 @@ Time spent: 40 minutes.
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+Total time spent on assignment: [5-6 hours]
 
-**Most challenging part**:
+Most challenging part: Understanding thread execution and waiting time calculation.
 
-**Most interesting learning**:
+Most interesting learning: Learning how Java threads work with Round-Robin scheduling.
 
-**What I would do differently next time**:
+What I would do differently next time: Start earlier and test each feature separately.
 
 ---
 
