@@ -267,7 +267,7 @@ What I would do differently next time: Start earlier and test each feature separ
 
 > 💡 **TIP:** Pick **one** specific challenge (understanding the code, one of the features, Git, the video) and say *why* it was hard.
 
-**Your Answer:** *(5-7 sentences)*
+**The most challenging part of this assignment was understanding how the ready queue works. I needed to understand how processes move through the queue in FIFO order. I also had to understand how the time quantum affects process execution. At first, the scheduling loop was confusing. I reviewed the code step by step to understand it better. This helped me understand the Round-Robin algorithm.** *(5-7 sentences)*
 
 [Write your answer here.]
 
